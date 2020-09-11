@@ -1,0 +1,30 @@
+
+mixin CategoriesSectionFooter()
+	div.categories
+		h4 Categories Index
+		ul
+			each category in page.Site().categories
+				+CategoryWithCounter(category)
+
+mixin TagsSectionFooter()
+	div.tags
+		h4 Tags Index
+		ul
+			each tag in page.Site().tags
+				+TagWithCounter(tag)
+
+mixin InformationSectionFooter()
+	div.info
+		h4 More Information
+		ul
+			each node in page.Site().meta.json["info"]
+				+InfoLink(node)
+
+mixin SocialSectionFooter()
+	div.social
+		h4 Social Media
+		ul
+			each node in page.Site().meta.json["social"]
+				+SocialLink(node)
+
+

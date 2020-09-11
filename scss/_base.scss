@@ -1,0 +1,152 @@
+
+html, body
+{
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	line-height: 2.5;
+	margin: 0px;
+	p + & {
+		margin-top: 40px;
+	}
+}
+
+p
+{
+	line-height: 2.5;
+	margin: 0px;
+	& + p {
+		margin-top: 40px;
+	}
+}
+
+li
+{
+	line-height: 2.5;
+	margin-bottom: 10px;
+}
+
+div
+{
+	box-sizing: border-box;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a
+{
+	color: inherit;
+	outline: 0px;
+	line-height: 1.8;
+	text-decoration: none;
+}
+
+ul.unset {
+	list-style-type: none;
+	padding: 0px;
+}
+
+@mixin NormalLink
+{
+	color: blue;
+	padding: 6px 0px;
+	border-bottom: 2px solid transparent;
+	transition: all 0.2s;
+	&:hover
+	{
+		border-color: blue;
+	}
+}
+
+a.hover-link
+{
+	display: inline-block;
+	& > div.link-title
+	{
+		//
+	}
+	& > div.link-border
+	{
+		height: 2px;
+		background-color: #fff;
+		width: 0%;
+		transition: 0.25s;
+		margin-top: 2px;
+		margin-bottom: 6px;
+	}
+	&:hover > div.link-border, &:focus > div.link-border
+	{
+		width: 100%;
+	}
+}
+
+a.navbar, a.category, a.tag {
+	border: 2px solid transparent;
+	transition: all 0.2s;
+	color: #fff;
+	&:hover, &:focus {
+		border-color: #fff;
+	}
+	& > span.count {
+		color: #000;
+		background-color: #fff;
+		padding: 2px 4px;
+		border-radius: 2px;
+		margin-left: 5px;
+	}
+}
+
+a.navbar, a.category {
+	font-size: 14px;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 4px 8px;
+	margin: 2px 6px;
+}
+
+a.navbar {
+	display: block;
+}
+
+a.category {
+	display: inline-block;
+	&.light {
+		border-color: #444;
+		color: #222;
+		background-color: transparent;
+		&:hover, &:focus {
+			background-color: #444;
+			color: #fff;
+		}
+	}
+}
+
+a.tag {
+	display: block;
+	font-size: 12px;
+	padding: 2px 4px;
+	margin: 8px 0px;
+	margin-right: 10px;
+	background-color: #c62828;
+	&.light {
+		border-color: #c62828;
+		color: #c62828;
+		background-color: transparent;
+		&:hover, &:focus {
+			background-color: #c62828;
+			color: #fff;
+		}
+	}
+}
+
+body
+{
+	font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+}
+
+

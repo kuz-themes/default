@@ -1,0 +1,38 @@
+
+mixin NavBar()
+	if page.Show("navbar")
+		div.navbar
+			ul
+				each node in page.Site().meta.json["navbar"]	
+					li
+						a(href=node.url).navbar= node.title
+
+mixin PageCategory()
+	if page.IsPage() && page.Show("category")
+		div.category
+			- let category = page.Category()
+			p Posted in #[a(href=category.RelativeURL()).category= category.Title()]
+
+mixin PageTitle()
+	div.title
+		h1= page.Title()
+
+mixin PageAuthor()
+	if page.IsPage() && page.Show("author")
+		div.author
+			- let author = page.Author()
+			p Written by #[a(href=author.RelativeURL())= author.Title()]
+
+mixin PageDescription()
+	if page.Show("description")
+		div.description
+			p= page.Description()
+
+mixin PageTags()
+	if page.IsPage() && page.Show("tags")
+		div.tags
+			ul
+				each tag in page.Tags()
+					+TagWithCounter(tag)
+
+

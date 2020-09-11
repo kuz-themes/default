@@ -1,0 +1,13 @@
+
+mixin BaseURL()
+	if page.HasRelativeBase()
+		base(href=page.Base())
+	else
+		base(href=page.Site().meta.json.meta.SITE_URL)
+
+mixin Analytics()
+	- let analytics = page.Site().meta.json.analytics
+	if analytics != undefined
+		| !{page.Site().GetDataFileContents(analytics)}
+
+

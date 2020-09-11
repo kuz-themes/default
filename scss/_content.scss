@@ -1,0 +1,43 @@
+
+article {
+	background-color: #eee;
+	& > div {
+		min-height: 1200px;
+		max-width: $max-width;
+		margin: auto;
+		background-color: #fff;
+		padding: 36px 20px;
+		padding-bottom: 200px;
+		& > div.pages {
+			& > ul {
+				text-align: center;
+				& > li {
+					padding: 10px;
+					display: inline-block;
+					vertical-align: top;
+					width: 420px;
+					& > div.page-card {
+						text-align: left;
+						border: 1px solid #ccc;
+						& > div {
+							padding: 8px 12px;
+						}
+						& > div.middle {
+							border: 0px solid #ccc;
+							border-width: 1px 0px;
+						}
+						& > div.bottom {
+							& > ul {
+								& > li {
+									display: inline-block;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

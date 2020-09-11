@@ -1,0 +1,45 @@
+include mixins
+
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(name="description" itemprop="description" content=page.Description())
+
+		title= page.Title()
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+
+		+BaseURL()
+
+		link(rel="stylesheet", href="x/dist/css/kaagazz.css")
+
+		+Analytics()
+
+	body
+		header
+			+NavBar()
+
+			div.header
+				+PageCategory()
+				+PageTitle()
+				+PageAuthor()
+				+PageDescription()
+				+PageTags()
+
+		article
+			div
+				block content
+
+		footer.one
+			+CategoriesSectionFooter()
+			+TagsSectionFooter()
+
+		footer.two
+			+InformationSectionFooter()
+			+SocialSectionFooter()
+
+		footer.three
+			div
+				h5 &copy; Copyright 2020, Ankur Seth. All Rights Reserved.
+
+

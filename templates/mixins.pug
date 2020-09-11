@@ -1,0 +1,62 @@
+include mixins/head
+include mixins/header
+include mixins/article
+include mixins/footer
+
+mixin HoverLinkInternal(text, url)
+	a.hover-link(href=url)
+		div.link-title= text
+		div.link-border
+
+mixin HoverLink(link)
+	+HoverLinkInternal(link["title"], link["url"])
+
+mixin InfoLink(link)
+	li
+		+HoverLinkInternal(link["title"], link["url"])
+
+mixin SocialLink(link)
+	li #{link["title"]}: 
+		+HoverLinkInternal("@madhumeya", link["url"])
+
+mixin PageCard(page)
+	li
+		div.page-card
+			div.top
+				- let category = page.GetCategory()
+				p Posted in #[a(href=category.RelativeURL()).category.light= category.GetTitle()]
+			div.middle
+				h2
+					a(href=page.RelativeURL())= page.GetTitle()
+				p= page.GetDescription()
+			div.bottom
+				ul.unset
+					each tag in page.GetTags()
+						li
+							a(href=tag.RelativeURL()).tag.light= tag.GetTitle()
+
+mixin ListPages(pages)
+	div.pages
+		ul.unset
+			each page in pages
+				if page.IsToBeShown()
+					+PageCard(page)
+
+mixin CategoryWithCounter(category)
+	- let count = category.GetPagesCount();
+	if count > 0
+		li
+			a(href=category.RelativeURL()).category
+				span.text= category.GetTitle()
+				span.count= count
+
+mixin TagWithCounter(tag)
+	- let count = tag.GetPagesCount();
+	if count > 0
+		li
+			a(href=tag.RelativeURL()).tag
+				span.text= tag.GetTitle()
+				span.count= count
+
+
+
