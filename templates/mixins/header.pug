@@ -9,9 +9,10 @@ mixin NavBar()
 
 mixin PageCategory()
 	if page.IsPage() && page.Show("category")
-		div.category
-			- let category = page.Category()
-			p Posted in #[a(href=category.RelativeURL()).category= category.Title()]
+		- let category = page.Category()
+		if category
+			div.category
+				p Posted in #[a(href=category.RelativeURL()).category= category.Title()]
 
 mixin PageTitle()
 	div.title
@@ -19,9 +20,10 @@ mixin PageTitle()
 
 mixin PageAuthor()
 	if page.IsPage() && page.Show("author")
-		div.author
-			- let author = page.Author()
-			p Written by #[a(href=author.RelativeURL())= author.Title()]
+		- let author = page.Author()
+		if author
+			div.author
+				p Written by #[a(href=author.RelativeURL())= author.Title()]
 
 mixin PageDescription()
 	if page.Show("description")
