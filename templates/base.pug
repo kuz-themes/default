@@ -3,11 +3,11 @@ include mixins
 doctype html
 html(lang="en")
 	head
-		meta(charset='utf-8')
-		meta(name="description" itemprop="description" content=page.Description())
+		+MetaCharset()
+		+MetaSEO()
 
 		title= page.Title()
-		meta(name="viewport" content="width=device-width, initial-scale=1")
+		+MetaViewport()
 
 		+BaseURL()
 
