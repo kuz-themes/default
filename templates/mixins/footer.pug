@@ -27,4 +27,8 @@ mixin SocialSectionFooter()
 			each node in page.Site().meta.json["social"]
 				+SocialLink(node)
 
+mixin SimpleCopyright()
+	div
+		h5 &copy; Copyright 2020, Ankur Seth. All Rights Reserved.
+
 
