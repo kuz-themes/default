@@ -4,13 +4,39 @@
 		"version": "0.2"
 	},
 
-	"templates": {
-		"author": "author.pug",
-		"category": "category.pug",
-		"collection": "collection.pug",
-		"page": "page.pug",
-		"tag": "tag.pug"
-	},
+	"layouts": [
+		{
+			"description": "",
+			"name": "author",
+			"path": "author.pug",
+			"title": ""
+		},
+		{
+			"description": "",
+			"name": "category",
+			"path": "category.pug",
+			"title": ""
+		},
+		{
+			"description": "",
+			"name": "collection",
+			"path": "collection.pug",
+			"title": ""
+		},
+		{
+			"description": "",
+			"default": true,
+			"name": "page",
+			"path": "page.pug",
+			"title": ""
+		},
+		{
+			"description": "",
+			"name": "tag",
+			"path": "tag.pug",
+			"title": ""
+		}
+	],
 
 	"css": [
 		{
