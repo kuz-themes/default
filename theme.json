@@ -40,25 +40,28 @@
 
 	"css": [
 		{
-			"title": "Default",
 			"description": "",
-			"path": "default.css"
+			"name": "default",
+			"path": "default.css",
+			"title": "Default"
 		}
 	],
 
 	"js": [
 		{
-			"title": "Default",
 			"description": "",
-			"path": "default.js"
+			"name": "default",
+			"path": "default.js",
+			"title": "Default"
 		}
 	],
 
 	"res": [
 		{
-			"title": "Default",
 			"description": "",
-			"path": "default.ttf"
+			"name": "default",
+			"path": "default.ttf",
+			"title": "Default"
 		}
 	]
 }
