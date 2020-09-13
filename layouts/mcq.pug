@@ -3,5 +3,14 @@ extends kaagazz
 
 block content
 	div.content !{article.GetContentHtml()}
+	div.question !{article.Section("question").Html()}
+
+	div.options
+		div.option= article.Section("a").Content()
+		div.option= article.Section("b").Content()
+		div.option= article.Section("c").Content()
+		div.option= article.Section("d").Content()
+
+	div.explanation !{article.Section("explanation").Html()}
 
 
