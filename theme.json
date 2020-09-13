@@ -12,7 +12,27 @@
 		"tag": "tag.pug"
 	},
 
-	"css": ["default.css"],
-	"js": ["default.js"],
-	"res": ["default.ttf"]
+	"css": [
+		{
+			"title": "Default",
+			"description": "",
+			"path": "default.css"
+		}
+	],
+
+	"js": [
+		{
+			"title": "Default",
+			"description": "",
+			"path": "default.js"
+		}
+	],
+
+	"res": [
+		{
+			"title": "Default",
+			"description": "",
+			"path": "default.ttf"
+		}
+	]
 }
