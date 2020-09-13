@@ -35,6 +35,12 @@
 			"name": "tag",
 			"path": "tag.pug",
 			"title": ""
+		},
+		{
+			"description": "",
+			"name": "mcq",
+			"path": "mcq.pug",
+			"title": ""
 		}
 	],
 
