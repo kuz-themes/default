@@ -2,7 +2,6 @@
 extends kaagazz
 
 block content
-	div.content !{article.GetContentHtml()}
 	div.question !{sections.question.Html()}
 
 	div.options
@@ -11,6 +10,13 @@ block content
 		div.option= sections.c.Content()
 		div.option= sections.d.Content()
 
-	div.explanation !{sections.explanation.Html()}
+	if sections.answer
+		div.answer !{sections.answer.Content()}
+
+	if sections.explanation
+		div.explanation !{sections.explanation.Html()}
+
+	if sections.comment
+		div.comment !{sections.comment.Html()}
 
 
