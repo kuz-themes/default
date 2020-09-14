@@ -1,7 +1,8 @@
 {
 	"meta": {
 		"name": "Default theme",
-		"version": "0.2"
+		"version": "0.2",
+		"documentation": "https://www.kaagazz.com"
 	},
 
 	"layouts": [
