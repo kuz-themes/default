@@ -6,53 +6,39 @@
 
 	"layouts": [
 		{
-			"description": "",
 			"name": "author",
-			"path": "author.pug",
-			"title": ""
+			"path": "author.pug"
 		},
 		{
-			"description": "",
 			"name": "category",
-			"path": "category.pug",
-			"title": ""
+			"path": "category.pug"
 		},
 		{
-			"description": "",
 			"name": "collection",
-			"path": "collection.pug",
-			"title": ""
+			"path": "collection.pug"
 		},
 		{
-			"description": "",
 			"default": true,
 			"name": "page",
-			"path": "page.pug",
-			"title": ""
+			"path": "page.pug"
 		},
 		{
-			"description": "",
 			"name": "tag",
-			"path": "tag.pug",
-			"title": ""
+			"path": "tag.pug"
 		},
 		{
-			"description": "",
 			"name": "mcq",
 			"path": "mcq.pug",
-			"title": ""
+			"documentation": "https://www.kaagazz.com"
 		},
 		{
-			"description": "",
 			"name": "question",
 			"path": "question.pug",
-			"title": ""
+			"documentation": "https://www.kaagazz.com"
 		},
 		{
-			"description": "",
 			"name": "timeline",
-			"path": "timeline.pug",
-			"title": ""
+			"path": "timeline.pug"
 		}
 	],
 
