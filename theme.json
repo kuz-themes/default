@@ -41,6 +41,12 @@
 			"name": "mcq",
 			"path": "mcq.pug",
 			"title": ""
+		},
+		{
+			"description": "",
+			"name": "question",
+			"path": "question.pug",
+			"title": ""
 		}
 	],
 

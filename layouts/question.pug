@@ -1,0 +1,17 @@
+
+extends kaagazz
+
+block content
+	div.question
+		div.question !{sections.question.Html()}
+
+		if sections.answer
+			div.answer !{sections.answer.Html()}
+
+		if sections.explanation
+			div.explanation !{sections.explanation.Html()}
+
+		if sections.comment
+			div.comment !{sections.comment.Html()}
+
+
