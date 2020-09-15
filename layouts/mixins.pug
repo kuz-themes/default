@@ -31,7 +31,7 @@ mixin PageCard(page)
 				p= page.GetDescription()
 			div.bottom
 				ul.unset
-					each tag in page.GetTags()
+					each tag in page.TagObjects()
 						li
 							a(href=tag.RelativeURL()).tag.light= tag.GetTitle()
 
