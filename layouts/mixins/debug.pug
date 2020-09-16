@@ -1,0 +1,29 @@
+
+mixin DebugAnyProps(props)
+	table
+		each val, key in props
+			tr
+				td= key
+				td= val
+
+mixin DebugProps()
+	h2 Props
+	+DebugAnyProps(props)
+
+mixin DebugCProps()
+	h2 CProps
+	+DebugAnyProps(cprops)
+
+mixin DebugSProps()
+	h2 SProps
+	+DebugAnyProps(sprops)
+
+mixin DebugKProps()
+	h2 KProps
+	+DebugAnyProps(kprops)
+
+mixin DebugTProps()
+	h2 TProps
+	+DebugAnyProps(tprops)
+
+
