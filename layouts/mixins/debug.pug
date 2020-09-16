@@ -1,10 +1,17 @@
 
-mixin DebugAnyProps(props)
+mixin DebugObject(object)
 	table
-		each val, key in props
+		each val, key in object
 			tr
 				td= key
-				td= val
+				if typeof val == "object"
+					td
+						+DebugObject(val)
+				else
+					td= val
+
+mixin DebugAnyProps(props)
+	+DebugObject(props)
 
 mixin DebugProps()
 	h2 Props
