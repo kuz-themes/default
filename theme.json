@@ -70,7 +70,7 @@
 		}
 	],
 
-	"res": [
+	"resources": [
 		{
 			"description": "",
 			"name": "default",
