@@ -43,6 +43,15 @@
 		}
 	],
 
+	"modules": [
+		{
+			"description": "",
+			"name": "default",
+			"path": "module.js",
+			"title": "Default"
+		}
+	],
+
 	"css": [
 		{
 			"description": "",
