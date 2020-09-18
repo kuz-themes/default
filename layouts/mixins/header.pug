@@ -3,9 +3,13 @@ mixin NavBar()
 	if page.Show("navbar")
 		div.navbar
 			ul
-				each node in page.Site().meta.json["navbar"]	
-					li
-						a(href=node.url).navbar= node.title
+				each node in page.Site().meta.json["navbar"]
+					if node.class
+						li
+							a(href=node.url, class=node.class).navbar= node.title
+					else
+						li
+							a(href=node.url).navbar= node.title
 
 mixin PageImage()
 	div.image
