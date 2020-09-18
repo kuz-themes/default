@@ -3,7 +3,7 @@ SASS = sass
 
 default: css
 
-CSS_IN = scss/kaagazz.scss
+CSS_IN = scss/default.scss
 CSS_OUT = css/default.css
 
 css: ${CSS_OUT}
