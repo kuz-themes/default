@@ -58,6 +58,12 @@
 			"name": "default",
 			"path": "default.css",
 			"title": "Default"
+		},
+		{
+			"description": "",
+			"name": "default-map",
+			"path": "default.css.map",
+			"title": "Default Map"
 		}
 	],
 
