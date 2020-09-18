@@ -90,6 +90,9 @@ a.navbar, a.category, a.tag {
 	border: 2px solid transparent;
 	transition: all 0.2s;
 	color: #fff;
+	&.maroon {
+		background-color: darkred;
+	}
 	&:hover, &:focus {
 		border-color: #fff;
 	}
