@@ -3,29 +3,29 @@ extends kaagazz
 
 block content
 	div.mcq
-		div.question !{sections.question.Html()}
+		div.question !{kuz.sections.question.Html()}
 
 		div.options
 			div.option
 				div.code A
-				div.text= sections.a.Content()
+				div.text= kuz.sections.a.Content()
 			div.option
 				div.code B
-				div.text= sections.b.Content()
+				div.text= kuz.sections.b.Content()
 			div.option
 				div.code C
-				div.text= sections.c.Content()
+				div.text= kuz.sections.c.Content()
 			div.option
 				div.code D
-				div.text= sections.d.Content()
+				div.text= kuz.sections.d.Content()
 
-		if sections.answer
-			div.answer !{sections.answer.Content()}
+		if kuz.sections.answer
+			div.answer !{kuz.sections.answer.Content()}
 
-		if sections.explanation
-			div.explanation !{sections.explanation.Html()}
+		if kuz.sections.explanation
+			div.explanation !{kuz.sections.explanation.Html()}
 
-		if sections.comment
-			div.comment !{sections.comment.Html()}
+		if kuz.sections.comment
+			div.comment !{kuz.sections.comment.Html()}
 
 
