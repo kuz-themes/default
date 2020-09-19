@@ -3,14 +3,14 @@ mixin CategoriesSectionFooter()
 	div.categories
 		h4 Categories Index
 		ul
-			each category in page.Site().categories
+			each category in page.Site().Categories()
 				+CategoryWithCounter(category)
 
 mixin TagsSectionFooter()
 	div.tags
 		h4 Tags Index
 		ul
-			each tag in page.Site().tags
+			each tag in page.Site().Tags()
 				+TagWithCounter(tag)
 
 mixin InformationSectionFooter()
