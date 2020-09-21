@@ -25,17 +25,17 @@ mixin PageCard(page)
 	li
 		div.page-card
 			div.top
-				- let category = page.GetCategory()
-				p Posted in #[a(href=category.RelativeURL()).category.light= category.GetTitle()]
+				- let category = page.getCategory()
+				p Posted in #[a(href=category.RelativeURL()).category.light= category.getTitle()]
 			div.middle
 				h2
-					a(href=page.RelativeURL())= page.GetTitle()
-				p= page.GetDescription()
+					a(href=page.RelativeURL())= page.getTitle()
+				p= page.getDescription()
 			div.bottom
 				ul.unset
-					each tag in page.TagObjects()
+					each tag in page.getTagObjects()
 						li
-							a(href=tag.RelativeURL()).tag.light= tag.GetTitle()
+							a(href=tag.RelativeURL()).tag.light= tag.getTitle()
 
 mixin ListPages(pages)
 	div.pages
@@ -49,7 +49,7 @@ mixin CategoryWithCounter(category)
 	if count > 0
 		li
 			a(href=category.RelativeURL()).category
-				span.text= category.GetTitle()
+				span.text= category.getTitle()
 				span.count= count
 
 mixin TagWithCounter(tag)
@@ -57,7 +57,7 @@ mixin TagWithCounter(tag)
 	if count > 0
 		li
 			a(href=tag.RelativeURL()).tag
-				span.text= tag.GetTitle()
+				span.text= tag.getTitle()
 				span.count= count
 
 

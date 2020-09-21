@@ -6,7 +6,7 @@ mixin MetaViewport()
 	meta(name="viewport" content="width=device-width, initial-scale=1")
 
 mixin MetaSEO()
-	meta(name="description" itemprop="description" content=page.Description())
+	meta(name="description" itemprop="description" content=page.getDescription())
 
 mixin BaseURL()
 	if page.HasRelativeBase()

@@ -28,36 +28,36 @@ mixin PageGitHubSourceLink()
 
 mixin PageCategory()
 	if page.IsPage() && page.Show("category")
-		- let category = page.Category()
+		- let category = page.getCategory()
 		if category
 			div.category
-				p Posted in #[a(href=category.RelativeURL()).category= category.Title()]
+				p Posted in #[a(href=category.RelativeURL()).category= category.getTitle()]
 		else
 			// page.Category() is null
 
 mixin PageTitle()
 	div.title
-		h1= page.Title()
+		h1= page.getTitle()
 
 mixin PageAuthor()
 	if page.IsPage() && page.Show("author")
-		- let author = page.Author()
+		- let author = page.getAuthor()
 		if author
 			div.author
-				p Written by #[a(href=author.RelativeURL())= author.Title()]
+				p Written by #[a(href=author.RelativeURL())= author.getTitle()]
 		else
 			// page.Author() is null
 
 mixin PageDescription()
 	if page.Show("description")
 		div.description
-			p= page.Description()
+			p= page.getDescription()
 
 mixin PageTags()
 	if page.IsPage() && page.Show("tags")
 		div.tags
 			ul
-				each tag in page.TagObjects()
+				each tag in page.getTagObjects()
 					+TagWithCounter(tag)
 
 
