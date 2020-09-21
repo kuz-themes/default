@@ -10,7 +10,7 @@ mixin MetaSEO()
 
 mixin BaseURL()
 	if page.HasRelativeBase()
-		base(href=page.Base())
+		base(href=page.getBase())
 	else
 		base(href=kuz.site.meta.json.meta.SITE_URL)
 

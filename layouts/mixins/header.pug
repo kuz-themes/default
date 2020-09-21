@@ -31,7 +31,7 @@ mixin PageCategory()
 		- let category = page.getCategory()
 		if category
 			div.category
-				p Posted in #[a(href=category.RelativeURL()).category= category.getTitle()]
+				p Posted in #[a(href=category.getRelativeURL()).category= category.getTitle()]
 		else
 			// page.Category() is null
 
@@ -44,7 +44,7 @@ mixin PageAuthor()
 		- let author = page.getAuthor()
 		if author
 			div.author
-				p Written by #[a(href=author.RelativeURL())= author.getTitle()]
+				p Written by #[a(href=author.getRelativeURL())= author.getTitle()]
 		else
 			// page.Author() is null
 
