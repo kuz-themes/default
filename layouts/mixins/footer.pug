@@ -3,14 +3,14 @@ mixin CategoriesSectionFooter()
 	div.categories
 		h4 Categories Index
 		ul
-			each category in kuz.site.Categories()
+			each category in kuz.site.getCategories()
 				+CategoryWithCounter(category)
 
 mixin TagsSectionFooter()
 	div.tags
 		h4 Tags Index
 		ul
-			each tag in kuz.site.Tags()
+			each tag in kuz.site.getTags()
 				+TagWithCounter(tag)
 
 mixin InformationSectionFooter()
