@@ -3,7 +3,7 @@ mixin NavBar()
 	if page.Show("navbar")
 		div.navbar
 			ul
-				each node in page.Site().meta.json["navbar"]
+				each node in kuz.site.meta.json["navbar"]
 					if node.class
 						li
 							a(href=node.url, class=node.class).navbar= node.title
@@ -20,7 +20,7 @@ mixin PageTitle()
 		h1= page.Title()
 
 mixin PageGitHubSourceLink()
-	- let repo = page.Site().meta.json.meta.SITE_REPO
+	- let repo = kuz.site.meta.json.meta.SITE_REPO
 	if repo
 		- let source = repo + "/blob/master/" + page.InputFilePath()
 		div.source
