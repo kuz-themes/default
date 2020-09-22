@@ -27,7 +27,7 @@ mixin PageGitHubSourceLink()
 			a(href=source) View Source
 
 mixin PageCategory()
-	if page.IsPage() && page.Show("category")
+	if page.isPage() && page.Show("category")
 		- let category = page.getCategory()
 		if category
 			div.category
@@ -40,7 +40,7 @@ mixin PageTitle()
 		h1= page.getTitle()
 
 mixin PageAuthor()
-	if page.IsPage() && page.Show("author")
+	if page.isPage() && page.Show("author")
 		- let author = page.getAuthor()
 		if author
 			div.author
@@ -54,7 +54,7 @@ mixin PageDescription()
 			p= page.getDescription()
 
 mixin PageTags()
-	if page.IsPage() && page.Show("tags")
+	if page.isPage() && page.Show("tags")
 		div.tags
 			ul
 				each tag in page.getTagObjects()
