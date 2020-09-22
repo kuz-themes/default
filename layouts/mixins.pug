@@ -33,7 +33,7 @@ mixin PageCard(page)
 				p= page.getDescription()
 			div.bottom
 				ul.unset
-					each tag in page.getTagObjects()
+					each tag in page.getTags()
 						li
 							a(href=tag.getRelativeURL()).tag.light= tag.getTitle()
 

@@ -57,7 +57,7 @@ mixin PageTags()
 	if page.isPage() && page.Show("tags")
 		div.tags
 			ul
-				each tag in page.getTagObjects()
+				each tag in page.getTags()
 					+TagWithCounter(tag)
 
 
