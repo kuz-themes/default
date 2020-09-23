@@ -22,7 +22,7 @@ mixin PageTitle()
 mixin PageGitHubSourceLink()
 	- let repo = kuz.site.meta.json.meta.SITE_REPO
 	if repo
-		- let source = repo + "/blob/master/" + page.InputFilePath()
+		- let source = repo + "/blob/master/" + page.getInputFilePath()
 		div.source
 			a(href=source) View Source
 
