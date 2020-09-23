@@ -17,6 +17,6 @@ mixin BaseURL()
 mixin Analytics()
 	- let analytics = kuz.sprops.analytics
 	if analytics != undefined
-		| !{kuz.site.GetDataFileContents(analytics)}
+		| !{kuz.site.getDataFileContents(analytics)}
 
 
