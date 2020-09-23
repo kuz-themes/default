@@ -41,7 +41,7 @@ mixin ListPages(pages)
 	div.pages
 		ul.unset
 			each page in pages
-				if page.IsVisible()
+				if page.isVisible()
 					+PageCard(page)
 
 mixin CategoryWithCounter(category)
