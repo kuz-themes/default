@@ -15,10 +15,6 @@
 			"path": "category.pug"
 		},
 		{
-			"name": "collection",
-			"path": "collection.pug"
-		},
-		{
 			"default": true,
 			"name": "page",
 			"path": "page.pug"
