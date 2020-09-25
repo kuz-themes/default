@@ -1,0 +1,23 @@
+
+div.pagination {
+	& > div.middle {
+		border-color: #aaa;
+		border-style: solid;
+		border-width: 1px 0px;
+		display: flex;
+		flex-direction: row;
+		& > div {
+			width: 50%;
+			padding: 20px 10px;
+		}
+		& > div.previous {
+			text-align: left;
+			border-right: 1px solid #aaa;
+		}
+		& > div.next {
+			text-align: right;
+		}
+	}
+}
+
+
