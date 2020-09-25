@@ -4,14 +4,18 @@ mixin CategoriesSectionFooter()
 		h4 Categories Index
 		ul
 			each category in kuz.site.getCategories()
-				+CategoryWithCounter(category)
+				li
+					a(href=category.getRelativeURL()).category
+						span.text= category.getTitle()
 
 mixin TagsSectionFooter()
 	div.tags
 		h4 Tags Index
 		ul
 			each tag in kuz.site.getTags()
-				+TagWithCounter(tag)
+				li
+					a(href=tag.getRelativeURL()).tag
+						span.text= tag.getTitle()
 
 mixin InformationSectionFooter()
 	div.info
