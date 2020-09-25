@@ -58,6 +58,8 @@ mixin PageTags()
 		div.tags
 			ul
 				each tag in page.getTags()
-					+TagWithCounter(tag)
+					li
+						a(href=tag.getRelativeURL()).tag
+							span.text= tag.getTitle()
 
 
