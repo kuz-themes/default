@@ -3,15 +3,15 @@ extends kaagazz
 
 block content
 	div.question
-		div.question !{kuz.sections.question.Html()}
+		div.question !{kuz.contentSections.question.getHtml()}
 
-		if kuz.sections.answer
-			div.answer !{kuz.sections.answer.Html()}
+		if kuz.contentSections.answer
+			div.answer !{kuz.contentSections.answer.getHtml()}
 
-		if kuz.sections.explanation
-			div.explanation !{kuz.sections.explanation.Html()}
+		if kuz.contentSections.explanation
+			div.explanation !{kuz.contentSections.explanation.getHtml()}
 
-		if kuz.sections.comment
-			div.comment !{kuz.sections.comment.Html()}
+		if kuz.contentSections.comment
+			div.comment !{kuz.contentSections.comment.getHtml()}
 
 
