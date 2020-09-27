@@ -15,8 +15,7 @@ mixin BaseURL()
 		base(href=kuz.s.props.SITE_URL)
 
 mixin Analytics()
-	- let analytics = kuz.s.props.analytics
-	if analytics != undefined
-		| !{kuz.site.getDataFileContents(analytics)}
+	if kuz.s.codes.analytics != undefined
+		| !{kuz.s.codes.analytics.getContent()}
 
 
