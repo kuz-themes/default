@@ -21,14 +21,14 @@ mixin InformationSectionFooter()
 	div.info
 		h4 More Information
 		ul
-			each node in kuz.site.meta.json["info"]
+			each node in kuz.sjsons.footer["info"]
 				+InfoLink(node)
 
 mixin SocialSectionFooter()
 	div.social
 		h4 Social Media
 		ul
-			each node in kuz.site.meta.json["social"]
+			each node in kuz.sjsons.footer["social"]
 				+SocialLink(node)
 
 mixin SimpleCopyright()
