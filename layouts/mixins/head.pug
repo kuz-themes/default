@@ -12,7 +12,7 @@ mixin BaseURL()
 	if page.HasRelativeBase()
 		base(href=page.getBase())
 	else
-		base(href=kuz.sprops.meta.SITE_URL)
+		base(href=kuz.sprops.SITE_URL)
 
 mixin Analytics()
 	- let analytics = kuz.sprops.analytics
