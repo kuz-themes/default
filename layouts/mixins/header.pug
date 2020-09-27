@@ -3,7 +3,7 @@ mixin NavBar()
 	if page.Show("navbar")
 		div.navbar
 			ul
-				each node in kuz.site.meta.json["navbar"]
+				each node in kuz.sjsons.navbar["navbar"]
 					if node.class
 						li
 							a(href=node.url, class=node.class).navbar= node.title
