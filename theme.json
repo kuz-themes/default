@@ -16,8 +16,8 @@
 		},
 		{
 			"default": true,
-			"name": "page",
-			"path": "page.pug"
+			"name": "post",
+			"path": "post.pug"
 		},
 		{
 			"name": "tag",
