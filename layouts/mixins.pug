@@ -20,7 +20,7 @@ mixin InfoLink(link)
 
 mixin SocialLink(link)
 	li #{link["title"]}: 
-		+HoverLinkInternal("@madhumeya", link["url"])
+		+HoverLinkInternal("@" + link["name"], link["url"])
 
 mixin PageCard(page)
 	li
