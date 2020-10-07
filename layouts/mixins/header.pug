@@ -20,11 +20,8 @@ mixin PageTitle()
 		h1= page.Title()
 
 mixin PageGitHubSourceLink()
-	- let repo = kuz.s.props.SITE_REPO
-	if repo
-		- let source = repo + "/blob/master/" + page.getInputFilePath()
-		div.source
-			a(href=source) View Source
+	div.source
+		a(href=page.getPageSourceURL()) View Source
 
 mixin PageCategory()
 	if page.isPost() && page.Show("category")
